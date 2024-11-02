@@ -47,10 +47,10 @@ if(chart) {
 }
   
   function vote(ID) {
-    // if (localStorage.getItem('hasVoted')) {
-    //     alert("You've already voted!");
-    //     return;
-    // }
+    if (localStorage.getItem('hasVoted')) {
+        alert("You've already voted!");
+        return;
+    }
   
     votes[ID] += 1;
     totalVotes += 1;
